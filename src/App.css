@@ -1,38 +1,62 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.search-container {
+  width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-container input {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  background-color: gainsboro;
+  color: black;
+  outline: none;
+  padding: 12px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.cocktail-data {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.cocktail-data li {
+  margin: 10px;
+}
+
+.cocktail-data img {
+  width: 250px;
+  height: 200px;
+  border-radius: 14px;
+}
+.cocktail-data p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 577px) {
+  .cocktail-data {
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 769px) {
+  .cocktail-data {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
   }
 }
